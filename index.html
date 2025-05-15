@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Self-Learning Chess Engine</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Self-Learning Chess Engine</h1>
+    <!--<div id="setupBox" class="floating-box">
+        <h3>New Game Setup</h3>
+      
+        <label for="modeSelect">Mode:</label>
+        <select id="modeSelect" onchange="toggleSetupOptions()">
+          <option value="2p">2 Player</option>
+          <option value="bot">Play vs Bot</option>
+        </select>
+      
+        <div id="sideSelection" style="display: none;">
+          <label for="botSideSelect">Play as:</label>
+          <select id="botSideSelect">
+            <option value="w">White</option>
+            <option value="b">Black</option>
+          </select>
+        </div>
+      
+        <div id="timerOptions">
+          <label for="timeInput">Time per side (min):</label>
+          <input type="number" id="timeInput" min="1" max="60" value="5">
+        </div>
+      
+        <button onclick="startNewGame()">Start Game</button>
+      </div>
+      -->
+
+
+    <div class="chess-container">
+
+        <!-- Game control buttons -->
+        <div class="controls">
+            <button id="undoButton">Undo Move</button>
+            <button id="saveGameButton" >Save Game</button>
+            <button id="loadGameButton">Load Game</button>
+            <button id="resetBtn">Reset Game</button>
+            <button id="downloadPGN" >Export PGN</button>
+            <button id="printSavedGames" >Print Saved Games</button>
+            <div id="gameLoader">
+              <select id="savedGamesSelect">
+                  <option value="">-- Load a saved game --</option>
+              </select>
+              <button onclick="loadSelectedGame()">Load</button>
+          </div>
+          
+        </div>
+
+        <!-- Chessboard -->
+        <div id="chessboard" class="board"></div>
+
+        <div id="timers">
+            <div id="black-timer">Black: 05:00</div>
+            <div id="moveList" class="move-list"></div>
+            <div id="white-timer">White: 05:00</div>
+        </div>
+        
+    </div>
+
+    
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.min.js"></script>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
+

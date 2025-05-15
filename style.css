@@ -1,0 +1,131 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: #f0f0f0;
+}
+
+.chess-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#chessboard {
+  display: grid;
+  grid-template-columns: repeat(8, 80px);
+  grid-template-rows: repeat(8, 80px);
+  width: 640px;
+  margin: 20px auto;
+  border: 4px solid #333;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  height: 640px;
+  justify-content: center;
+  gap: 10px;
+}
+.controls button{
+  padding: 10px;
+  background-color: brown;
+  border-radius: 3px;
+  font-size:16px;
+  font-weight: 600;
+}
+.move-list {
+  width: 200px;
+  max-height: 400px;
+  overflow-y: auto;
+  background: #f2f2f2;
+  padding: 10px;
+  font-family: monospace;
+}
+
+
+.square {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.white {
+  background-color: #ffd987;
+  font-size: 50px;
+}
+
+.black {
+  background-color: #4a2500;
+  color: white;
+  font-size: 50px;
+}
+
+.white-piece {
+  color: rgb(255, 255, 255);
+}
+
+.black-piece {
+  color: rgb(0, 0, 0);
+}
+
+.label {
+  position: absolute;
+  font-weight: bold;
+  font-size: 14px;
+  color: black;
+}
+
+.file-label {
+  bottom: -20px;
+}
+
+.rank-label {
+  left: -20px;
+}
+
+/* Style for legal move squares */
+.legal-move {
+  background-color: rgba(0, 255, 0, 0.5); /* Light green background */
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+
+.king-in-check {
+  text-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px red, 0 0 40px red;
+}
+
+#timers {
+  display: flex;
+  flex-direction: column;
+  height: 640px;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#timers div {
+  padding: 15px;
+  background-color: #424242;
+  color:#c7c7c7
+}
+
+.floating-box {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  border: 2px solid #333;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  z-index: 1000;
+  border-radius: 8px;
+}
+
